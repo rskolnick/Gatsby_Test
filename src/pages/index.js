@@ -1,21 +1,17 @@
 import React from 'react';
 // import { Link } from 'gatsby'; used for internal Gatsby pages
+import { Helmet } from 'react-helmet';
 
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 
 const IndexPage = () => {
-  return (
-    <div>
-      <Header />
-      <h1>Hello!</h1>
-      <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, totam.</h2>
-      {/* When linking to an outside site like your github profile or twitter, use a tag */}
-      {/* <p>Need a developer? <a href="/contact">Contact me.</a></p> */}
-      {/* When linking internally to Gatsby pages, use Link tag */}
-      {/* <p>Need a developer? <Link to='/contact'>Contact me.</Link></p> */}
-      <Footer />
-    </div>
+  return(
+    <Layout>
+      <Helmet title='My Site' defer={false} />
+      <h1>Hello</h1>
+      <h2>I'm Ryan Skolnick</h2>
+      <p>Need a developer?</p>
+    </Layout>
   );
 }
 
